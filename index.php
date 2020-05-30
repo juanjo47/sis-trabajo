@@ -29,16 +29,16 @@
 					</span>
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="procesos/login.php" method="post">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Usuario</span>
-						<input class="input100" type="text" name="username" placeholder="Ingresar Nombre de Usuario">
+						<input class="input100" type="text" name="correo-login" placeholder="Ingresar Nombre de Usuario">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
 						<span class="label-input100">Contraseña</span>
-						<input class="input100" type="password" name="pass" placeholder="Ingresar Contraseña">
+						<input class="input100" type="password" name="clave-login" placeholder="Ingresar Contraseña">
 						<span class="focus-input100"></span>
 					</div>
 
