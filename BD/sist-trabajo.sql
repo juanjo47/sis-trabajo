@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2020 a las 06:02:36
+-- Tiempo de generación: 30-05-2020 a las 08:02:27
 -- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.3.18
+-- Versión de PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,11 +31,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `administrador` (
   `ID_admin` int(11) NOT NULL,
   `correo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `contraseña` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `contraseña` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `apellido` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `codigo_saga` varchar(20) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `administrador`
+--
+
+INSERT INTO `administrador` (`ID_admin`, `correo`, `contraseña`, `nombre`, `apellido`, `codigo_saga`) VALUES
+(4, 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Juan Jose ', 'Quiroga Torrez', 'A17615-6');
 
 -- --------------------------------------------------------
 
@@ -132,7 +140,7 @@ ALTER TABLE `trabajo`
 -- AUTO_INCREMENT de la tabla `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `ID_admin` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `docente`
