@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-05-2020 a las 07:15:29
+-- Tiempo de generación: 30-05-2020 a las 06:02:36
 -- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.3
+-- Versión de PHP: 7.3.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sist_trabajo`
+-- Base de datos: `sist-trabajo`
 --
 
 -- --------------------------------------------------------
@@ -44,7 +43,7 @@ CREATE TABLE `administrador` (
 --
 
 CREATE TABLE `docente` (
-  `ID_docente` int(11) NOT NULL,
+  `ID_docente` int(100) NOT NULL,
   `correo` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `contraseña` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -73,9 +72,10 @@ CREATE TABLE `estudiante` (
   `semestre` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `codigo_saga` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `carnet` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `Tutor` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `revisor_1` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `revisor_2` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+  `Tutor` int(100) NOT NULL,
+  `revisor_1` int(100) NOT NULL,
+  `revisor_2` int(100) NOT NULL,
+  `Trabajo` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -85,7 +85,7 @@ CREATE TABLE `estudiante` (
 --
 
 CREATE TABLE `trabajo` (
-  `ID_trabajo` int(11) NOT NULL,
+  `ID_trabajo` int(100) NOT NULL,
   `titulo` varchar(125) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` text COLLATE utf8_unicode_ci NOT NULL,
   `area_desempeño` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -112,7 +112,11 @@ ALTER TABLE `docente`
 -- Indices de la tabla `estudiante`
 --
 ALTER TABLE `estudiante`
-  ADD PRIMARY KEY (`ID_estudiante`);
+  ADD PRIMARY KEY (`ID_estudiante`),
+  ADD KEY `Trabajo` (`Trabajo`),
+  ADD KEY `Tutor` (`Tutor`),
+  ADD KEY `revisor_1` (`revisor_1`),
+  ADD KEY `revisor_2` (`revisor_2`);
 
 --
 -- Indices de la tabla `trabajo`
@@ -134,7 +138,7 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de la tabla `docente`
 --
 ALTER TABLE `docente`
-  MODIFY `ID_docente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_docente` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `estudiante`
@@ -146,7 +150,20 @@ ALTER TABLE `estudiante`
 -- AUTO_INCREMENT de la tabla `trabajo`
 --
 ALTER TABLE `trabajo`
-  MODIFY `ID_trabajo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_trabajo` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `estudiante`
+--
+ALTER TABLE `estudiante`
+  ADD CONSTRAINT `estudiante_ibfk_1` FOREIGN KEY (`Trabajo`) REFERENCES `trabajo` (`ID_trabajo`),
+  ADD CONSTRAINT `estudiante_ibfk_2` FOREIGN KEY (`Tutor`) REFERENCES `docente` (`ID_docente`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `estudiante_ibfk_3` FOREIGN KEY (`revisor_1`) REFERENCES `docente` (`ID_docente`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `estudiante_ibfk_4` FOREIGN KEY (`revisor_2`) REFERENCES `docente` (`ID_docente`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
