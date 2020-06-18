@@ -72,7 +72,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link">
-                                
+
                                 <p>
                                     Gestion de Usuarios
                                     <i class="right fas fa-angle-left"></i>
@@ -81,28 +81,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="reg_est.php" class="nav-link active">
-                                        
+
                                         <p>Registro Estudiantes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="reg_doc.php" class="nav-link">
-                                        
+
                                         <p>Registro Docentes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="reg_adm.php" class="nav-link">
-                                        
+
                                         <p>Registro Administradores</p>
                                     </a>
                                 </li>
-                                
+
                             </ul>
                         </li>
                         <li class="nav-item has-treeview menu-close">
                             <a href="#" class="nav-link">
-                                
+
                                 <p>
                                     Gestion de Tribunal
                                     <i class="right fas fa-angle-left"></i>
@@ -111,28 +111,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        
+
                                         <p>Asignacion de Tribunal</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        
+
                                         <p>Asignacion de Trabajo</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        
+
                                         <p>Evidencia de asignaciones</p>
                                     </a>
                                 </li>
-                                
+
                             </ul>
                         </li>
                         <li class="nav-item has-treeview menu-close">
                             <a href="#" class="nav-link">
-                                
+
                                 <p>
                                     Seguimiento de TG
                                     <i class="right fas fa-angle-left"></i>
@@ -141,23 +141,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        
+
                                         <p>Revision de documentos</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        
+
                                         <p>fechas de entrega</p>
                                     </a>
                                 </li>
-                                
+
                             </ul>
                         </li>
                     </ul>
                 </nav>
-                
-                
+
+
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
@@ -168,114 +168,163 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Content Header (Page header) -->
             <!-- /.content-header -->
 
-            <!-- Main content -->
-            <div class="card card-info">
-              <div class="card-header bg-navy color-palette">
-                <h3 class="card-title">Registro de Administradores</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form class="form-horizontal">
-                <div class="card-body">
-                  <div class="form-group row">
-                    <label for="inputnameAd" class="col-sm-2 col-form-label">Nombre Completo</label>
-                    <div class="col-sm-10">
-                      <input type="Name" class="form-control" id="inputEmail3" placeholder="Nombre">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputemail" class="col-sm-2 col-form-label">Correo</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputPassword3" placeholder="Correo">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Codigo Saga</label>
-                    <div class="col-sm-10">
-                      <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Codigo Saga">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Cedula</label>
-                    <div class="col-sm-10">
-                      <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Cedula de Identificacion">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Semestre</label>
-                    <div class="col-sm-10">
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option>--Seleccione--</option>
-                          <option>Noveno</option>
-                          <option>Decimo</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
+
+
+            <div class="card card-primary card-outline card-tabs">
+                <div class="card-header p-0 pt-1 border-bottom-0">
+                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Registro de Administradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">
+                                Modificar Datos del Estudiante
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn bg-navy">Registrar</button>
-                  <button type="submit" class="btn btn-default float-right">Cancel</button>
-                </div>
-                <!-- /.card-footer -->
-              </form>
+
+
             </div>
-            <div class="card card-info">
-              <div class="card-header bg-navy color-palette">
-                <h3 class="card-title">Modificar Datos del Estudiante</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form class="form-horizontal">
-                <div class="card-body"> 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th style="width: 10px">ID</th>
-                                <th>Nombre</th>
-                                <th>CI</th>
-                                <th>Contraseña</th>
-                                <th>Correo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php 
-                            $mensajes=  ejecutarSQL::consultar("select * from administrador");
+
+            <div class="card-body">
+                <div class="tab-content" id="custom-tabs-three-tabContent">
+                    <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+
+                        <!-- Registro de Administradores-->
+
+                        <!-- Main content -->
+                        <div class="card card-info">
+                            <div class="card-header bg-navy color-palette">
+                                <h3 class="card-title">Registro de Administradores</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                            <form class="form-horizontal">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="inputnameAd" class="col-sm-2 col-form-label">Nombre Completo</label>
+                                        <div class="col-sm-10">
+                                            <input type="Name" class="form-control" id="inputEmail3" placeholder="Nombre">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputemail" class="col-sm-2 col-form-label">Correo</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputPassword3" placeholder="Correo">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
+                                        <div class="col-sm-10">
+                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-2 col-form-label">Codigo Saga</label>
+                                        <div class="col-sm-10">
+                                            <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Codigo Saga">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-2 col-form-label">Cedula</label>
+                                        <div class="col-sm-10">
+                                            <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Cedula de Identificacion">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-2 col-form-label">Semestre</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option>--Seleccione--</option>
+                                                    <option>Noveno</option>
+                                                    <option>Decimo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <button type="submit" class="btn bg-navy">Registrar</button>
+                                    <button type="submit" class="btn btn-default float-right">Cancel</button>
+                                </div>
+                                <!-- /.card-footer -->
+                            </form>
+                        </div>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-three-profile" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+
+
+                        <!--Dar de baja Administradores-->
+
+                        <div class="card card-info">
+                            <div class="card-header bg-navy color-palette">
+                                <h3 class="card-title">Modificar Datos del Estudiante</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                            <form class="form-horizontal">
+                                <div class="card-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">ID</th>
+                                                <th>Nombre Completo</th>
+                                                <th>Correo</th>
+                                                <th>CI</th>
+                                                <th>Codigo Saga</th>
+                                                <th>Semestre</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php 
+                                        $mensajes=  ejecutarSQL::consultar("select * from estudiante");
                                         while($men=mysqli_fetch_array($mensajes)){ 
                                             
-                                                echo '            
+                                                echo '
                                                 <tr>
-                                                    <td>'.$men['ID_admin'].'</td>
-                                                    <td>'.$men['nombre'].'</td>
-                                                    <td>'.$men['codigo_saga'].'</td>
-                                                    <td>'.$men['apellido'].'</td>
+                                                    <td>'.$men['ID_estudiante'].'</td>
+                                                    <td>'.$men['nombres'].'</td>
                                                     <td>'.$men['correo'].'</td>
+                                                    <td>'.$men['carnet'].'</td>
+                                                    <td>'.$men['codigo_saga'].'</td>
+                                                    <td>
+                                                    <select class="form-control" name="adm-correo">';
+                                                    
+                                                    $adminCon=  ejecutarSQL::consultar("select * from estudiante");
+                                                    while($AdminD=mysqli_fetch_array($adminCon)){
+                                                        echo '<option value="'.$AdminD['semestre'].'">'.$AdminD['semestre'].'</option>';
+                                                    }
+                                                    echo '
+                                                    <option>Noveno</option>
+                                                    <option>Decimo</option>
+                                                    </select>
+                                                    </td>
                                                 </tr>';
                                             
                                         }
                                     ?>
-                                            </tbody>
-                                        </table>
-                  </div>
-                <!-- /.card-footer -->
-              </form>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-footer -->
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
 
-
-
         </div>
-                        <!-- /.col-md-6 -->
+        <!-- /.col-md-6 -->
     </div>
-                    <!-- /.row -->
-          
+    <!-- /.row -->
+
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
