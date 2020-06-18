@@ -207,18 +207,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Cedula de Identificacion">
                     </div>
                   </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Semestre</label>
-                    <div class="col-sm-10">
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option>--Seleccione--</option>
-                          <option>Noveno</option>
-                          <option>Decimo</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
+                    
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
