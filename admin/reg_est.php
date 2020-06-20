@@ -174,7 +174,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="card-header p-0 pt-1 border-bottom-0">
                     <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Registro de Administradores</a>
+                            <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Registro de Estudiantes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">
@@ -196,7 +196,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- Main content -->
                         <div class="card card-info">
                             <div class="card-header bg-navy color-palette">
-                                <h3 class="card-title">Registro de Administradores</h3>
+                                <h3 class="card-title">Registro de Estudiantes</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
@@ -267,7 +267,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form class="form-horizontal">
                                 <div class="card-body">
                                     <table class="table table-striped">
                                         <thead>
@@ -282,37 +281,57 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </thead>
                                         <tbody>
                                             <?php 
-                                        $mensajes=  ejecutarSQL::consultar("select * from estudiante");
-                                        while($men=mysqli_fetch_array($mensajes)){ 
+                                        $estudiantes =  ejecutarSQL::consultar("select * from estudiante");
+                                        $upr=1;
+                                        while($est=mysqli_fetch_array($estudiantes)){ 
                                             
                                                 echo '
+                                                <div>
+                                                  <form method="post" action="../procesos/updEstudiante.php" '.$upr.'">
                                                 <tr>
-                                                    <td>'.$men['ID_estudiante'].'</td>
-                                                    <td>'.$men['nombres'].'</td>
-                                                    <td>'.$men['correo'].'</td>
-                                                    <td>'.$men['carnet'].'</td>
-                                                    <td>'.$men['codigo_saga'].'</td>
                                                     <td>
-                                                    <select class="form-control" name="adm-correo">';
-                                                    
-                                                    $adminCon=  ejecutarSQL::consultar("select * from estudiante");
-                                                    while($AdminD=mysqli_fetch_array($adminCon)){
-                                                        echo '<option value="'.$AdminD['semestre'].'">'.$AdminD['semestre'].'</option>';
-                                                    }
-                                                    echo '
-                                                    <option>Noveno</option>
-                                                    <option>Decimo</option>
-                                                    </select>
+                                                        <input type="hidden" name="est-id" required="" value="'.$est['ID_estudiante'].'"> 
+                                                        '.$est['ID_estudiante'].'
                                                     </td>
-                                                </tr>';
-                                            
+                                                    <td>
+                                                        <input type="text" name="est-nombre" required="" value="'.$est['nombres'].'">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="est-correo" required="" value="'.$est['correo'].'">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="est-carnet" required="" value="'.$est['carnet'].'">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="est-saga" required="" value="'.$est['codigo_saga'].'">
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control" name="est-semestre">';
+
+                                                        $estCon=  ejecutarSQL::consultar("select * from estudiante");
+                                                        while($EstS=mysqli_fetch_array($estCon)){
+                                                            echo '<option name="est-semestre" value="'.$EstS['semestre'].'">'.$EstS['semestre'].'</option>';
+                                                        }
+                                                        echo '
+                                                        <option>Noveno</option>
+                                                        <option>Decimo</option>
+                                                        </select>
+                                                    </td>
+                                                    
+                                                    <td class="text-center">
+                                                            <button type="submit" class="btn btn-sm btn-primary button-UPR" value="res-update-product-'.$upr.'">Actualizar</button>
+                                                            <div id="res-update-product-'.$upr.'" style="width: 100%; margin:0px; padding:0px;"></div>
+                                                    </td>
+                                                </tr>
+                                            </form>
+                                        </div>';
+                                            $upr=$upr+1;
                                         }
                                     ?>
                                         </tbody>
                                     </table>
                                 </div>
                                 <!-- /.card-footer -->
-                            </form>
                         </div>
 
                     </div>
