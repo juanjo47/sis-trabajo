@@ -200,43 +200,44 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form class="form-horizontal">
+                            
+                            <form method="post" action="../procesos/regEst.php">
                                 <div class="card-body">
                                     <div class="form-group row">
                                         <label for="inputnameAd" class="col-sm-2 col-form-label">Nombre Completo</label>
                                         <div class="col-sm-10">
-                                            <input type="Name" class="form-control" id="inputEmail3" placeholder="Nombre">
+                                            <input name="nombre-registro-est" type="Name" class="form-control" placeholder="Nombre">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputemail" class="col-sm-2 col-form-label">Correo</label>
                                         <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputPassword3" placeholder="Correo">
+                                            <input name="correo-registro-est" type="email" class="form-control" placeholder="Correo">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
                                         <div class="col-sm-10">
-                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
+                                            <input name="contrasena-registro-est" type="password" class="form-control" placeholder="Contraseña">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 col-form-label">Codigo Saga</label>
                                         <div class="col-sm-10">
-                                            <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Codigo Saga">
+                                            <input name="codigo-registro-est" type="text" class="form-control" placeholder="Codigo Saga">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 col-form-label">Cedula</label>
                                         <div class="col-sm-10">
-                                            <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Cedula de Identificacion">
+                                            <input name="cedula-registro-est" type="text" class="form-control" placeholder="Cedula de Identificacion">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 col-form-label">Semestre</label>
                                         <div class="col-sm-10">
                                             <div class="form-group">
-                                                <select class="form-control">
+                                                <select name="semestre-registro-est" class="form-control">
                                                     <option>--Seleccione--</option>
                                                     <option>Noveno</option>
                                                     <option>Decimo</option>

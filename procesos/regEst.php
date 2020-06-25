@@ -3,27 +3,32 @@ include '../conexion/configServer.php';
 include '../conexion/consulSQL.php';
 
 sleep(2);
-$nombre= $_POST['nombre-registro'];
-$correo= $_POST['correo-registro'];
-$contrasena= md5($_POST['clave-registro']);
-$telefono= $_POST['telefono-registro'];
-$ci= $_POST['ci-registro'];
+
+
+
+$nombre= $_POST['nombre-registro-est'];
+$correo= $_POST['correo-registro-est'];
+$contrasena= $_POST['contrasena-registro-est'];
+$codigo= $_POST['codigo-registro-est'];
+$cedula= $_POST['cedula-registro-est'];
+$semestre= $_POST['semestre-registro-est'];
+
 $estado = 1;
 
-if(!$nombre=="" && !$correo=="" && !$contrasena=="" && !$telefono=="" && !$ci==""){
-    $verificar=  ejecutarSQL::consultar("select * from usuario where correo='".$correo."'");
+if(!$nombre=="" && !$correo=="" && !$contrasena=="" && !$codigo=="" && !$cedula=="" && !$semestre==""){
+    $verificar=  ejecutarSQL::consultar("select * from estudiante where correo='".$correo."'");
     $verificaltotal = mysqli_num_rows($verificar);
     
     if($verificaltotal<=0){
         // en vez de usuario pones estudiante
-        if(consultasSQL::InsertSQL("usuario", "nombre, correo, contrasena, telefono, CI, estado", "'$nombre','$correo','$contrasena','$telefono','$ci','$estado'")){
+        if(consultasSQL::InsertSQL("estudiante", "nombres, correo, contraseña, codigo_saga, carnet, semestre, estado", "'$nombre','$correo','$contrasena','$codigo','$cedula','$semestre','$estado'")){
             echo '
                 <script>  
                   var r = confirm("Se registro con exito");
                   if (r == true) {
-                    location.href="../iniciosesion.php";
+                    location.href="../admin/reg_est.php";
                   } else {
-                    location.href="../iniciosesion.php";
+                    location.href="../admin/reg_est.php";
                   }
                 
                 </script>
@@ -33,9 +38,9 @@ if(!$nombre=="" && !$correo=="" && !$contrasena=="" && !$telefono=="" && !$ci=="
                 <script>  
                   var r = confirm("Ha ocurrido un error.<br>Por favor intente nuevamente");
                   if (r == true) {
-                    location.href="../registro.php";
+                    location.href="../admin/reg_est.php";
                   } else {
-                    location.href="../registro.php";
+                    location.href="../admin/reg_est.php";
                   }
                 
                 </script>
