@@ -35,7 +35,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="index.php" class="nav-link">Inicio</a>
                 </li>
             </ul>
         </nav>
@@ -44,7 +44,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar bg-navy sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index.html" class="brand-link">
+            <a href="index.php" class="brand-link">
                 <span class="brand-text text-yellow " style="margin-left: 5px;">Escuela Militar de Ingenieria</span>
             </a>
 
@@ -164,130 +164,211 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <!-- /.content-header -->
+             <div class="content-wrapper" style="width: 100%">
+                        <!-- Content Header (Page header) -->
+                        <!-- /.content-header -->
 
-            <!-- Main content -->
-            <div class="card card-info">
-              <div class="card-header bg-navy color-palette">
-                <h3 class="card-title">Registro de Docentes</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form class="form-horizontal">
-                <div class="card-body">
-                  <div class="form-group row">
-                    <label for="inputnameAd" class="col-sm-2 col-form-label">Nombre</label>
-                    <div class="col-sm-10">
-                      <input type="Name" class="form-control" id="inputEmail3" placeholder="Nombres y Apellidos">
+                        <div class="card card-primary card-outline card-tabs">
+                            <div class="card-header p-0 pt-1 border-bottom-0">
+                                <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">
+                                            Registro del Docente</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">
+                                            Modificar Datos del Docente</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+            <div class="card-body">
+                <div class="tab-content" id="custom-tabs-three-tabContent">
+                    <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+
+                                    <!-- Registro de Administradores-->
+
+                                    <!-- Main content -->
+                        <div class="card card-info">
+                          <div class="card-header bg-navy color-palette">
+                            <h3 class="card-title">Registro de Docentes</h3>
+                          </div>
+                          <!-- /.card-header -->
+                          <!-- form start -->
+                          <form method="post" action="../procesos/regDoc.php">
+                            <div class="card-body">
+                              <div class="form-group row">
+                                <label for="inputnameAd" class="col-sm-2 col-form-label">Nombre</label>
+                                <div class="col-sm-10">
+                                  <input name="nombre-registro-doc" type="Name" class="form-control" placeholder="Nombres y Apellidos"  style="width: 60%">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputemail" class="col-sm-2 col-form-label">Correo</label>
+                                <div class="col-sm-10">
+                                  <input name="correo-registro-doc" type="email" class="form-control" placeholder="Correo" style="width: 60%">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
+                                <div class="col-sm-10">
+                                  <input name="contrasena-registro-doc" type="password" class="form-control" placeholder="Contraseña" style="width: 60%">
+                                </div>
+                              </div>
+                             <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Codigo Saga</label>
+                                <div class="col-sm-10">
+                                  <input name="codigo-registro-doc" type="texto" class="form-control" placeholder="Codigo Saga" style="width: 60%">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Cedula</label>
+                                <div class="col-sm-10">
+                                  <input name="cedula-registro-doc" type="texto" class="form-control" placeholder="Cedula de Identificacion" style="width: 60%">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
+                                <div class="col-sm-10">
+                                  <input name="especialidad1-registro-doc" type="texto" class="form-control" placeholder="Primer Area Especialidad y Principal Enfoque" style="width: 60%">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
+                                <div class="col-sm-10">
+                                  <input name="especialidad2-registro-doc" type="texto" class="form-control" placeholder="Segunda Area de Especialidad" style="width: 60%">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
+                                <div class="col-sm-10">
+                                  <input name="especialidad3-registro-doc" type="texto" class="form-control" placeholder="Tercer Area de Especialidad" style="width: 60%">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
+                                <div class="col-sm-10">
+                                  <input name="especialidad4-registro-doc" type="texto" class="form-control" placeholder="Cuarta Area de Especialidad" style="width: 60%">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
+                                <div class="col-sm-10">
+                                  <input name="especialidad5-registro-doc" type="Codigo" class="form-control" placeholder="Quinta Area de  Especialidad" style="width: 60%">
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <button type="submit" class="btn bg-navy">Registrar</button>
+                              <button type="clear" class="btn btn-default float-right">Cancel</button>
+                            </div>
+                            <!-- /.card-footer -->
+                          </form>
+                        </div>
+                        
+
                     </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputemail" class="col-sm-2 col-form-label">Correo</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputPassword3" placeholder="Correo">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
-                    </div>
-                  </div>
-                 <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Codigo Saga</label>
-                    <div class="col-sm-10">
-                      <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Codigo Saga">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Cedula</label>
-                    <div class="col-sm-10">
-                      <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Cedula de Identificacion">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
-                    <div class="col-sm-10">
-                      <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Primer Area Especialidad y Principal Enfoque">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
-                    <div class="col-sm-10">
-                      <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Segunda Area de Especialidad">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
-                    <div class="col-sm-10">
-                      <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Tercer Area de Especialidad">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
-                    <div class="col-sm-10">
-                      <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Cuarta Area de Especialidad">
-                    </div>
-                  </div>
-                    <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
-                    <div class="col-sm-10">
-                      <input type="Codigo" class="form-control" id="inputPassword3" placeholder="Quinta Area de  Especialidad">
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn bg-navy">Registrar</button>
-                  <button type="submit" class="btn btn-default float-right">Cancel</button>
-                </div>
-                <!-- /.card-footer -->
-              </form>
-            </div>
-            <div class="card card-info">
-              <div class="card-header bg-navy color-palette">
-                <h3 class="card-title">Modificacion de Docentes</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form class="form-horizontal">
-                <div class="card-body"> 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th style="width: 10px">ID</th>
-                                <th>Nombre</th>
-                                <th>CI</th>
-                                <th>Contraseña</th>
-                                <th>Correo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php 
-                            $mensajes=  ejecutarSQL::consultar("select * from administrador");
-                                        while($men=mysqli_fetch_array($mensajes)){ 
+                    <div class="tab-pane fade" id="custom-tabs-three-profile" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+
+
+                        <!--Dar de baja Administradores-->
+
+                        <div class="card card-info">
+                            <div class="card-header bg-navy color-palette">
+                                <h3 class="card-title">Modificar Datos del Estudiante</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                                <div class="card-body">
+                                    <table class="table table-striped">
+                                        <thead>
                                             
-                                                echo '            
+                                        </thead>
+                                        <tbody>
+                                            <?php 
+                                        $docentes =  ejecutarSQL::consultar("select * from docente");
+                                        $upr=1;
+                                        while($doc=mysqli_fetch_array($docentes)){ 
+                                                
+                                            echo '
+                                                <div>
+                                                  <form method="post" action="../procesos/updEstudiante.php" '.$upr.'">
+                                            <tr>
+                                                <th style="width: 10px">ID</th>
+                                                <th style="width: 100px">Nombre Completo</th>
+                                                <th style="width: 100px">Correo</th>
+                                                <th style="width: 100px">CI</th>
+                                                <th style="width: 100px">Codigo Saga</th>
+                                                <th style="width: 100px">especialidad_1</th>
+                                            </tr>
                                                 <tr>
-                                                    <td>'.$men['ID_admin'].'</td>
-                                                    <td>'.$men['nombre'].'</td>
-                                                    <td>'.$men['codigo_saga'].'</td>
-                                                    <td>'.$men['apellido'].'</td>
-                                                    <td>'.$men['correo'].'</td>
-                                                </tr>';
-                                            
+                                                    <td>
+                                                        <input type="hidden" name="est-id" required="" value="'.$doc['ID_docente'].'"> 
+                                                        '.$doc['ID_docente'].'
+                                                    </td>
+                                                    <td style="width: 180px">
+                                                        <input style="width: 100%" type="text" name="est-nombre" required="" value="'.$doc['nombres'].'">
+                                                    </td>
+                                                    <td style="width: 180px">
+                                                        <input style="width: 100%" type="text" name="est-correo" required="" value="'.$doc['correo'].'">
+                                                    </td >
+                                                    <td style="width: 180px">
+                                                        <input style="width: 100%" type="text" name="est-carnet" required="" value="'.$doc['carnet'].'">
+                                                    </td>
+                                                    <td style="width: 180px">
+                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['codigo_saga'].'">
+                                                    </td>
+                                                    <td style="width: 180px">
+                                                        <input  style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_1'].'">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                <th></th>
+                                                <th style="width: 100px">especialidad_2</th>
+                                                <th style="width: 100px">especialidad_3</th>
+                                                <th style="width: 100px">especialidad_4</th>
+                                                <th style="width: 100px">especialidad_5</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td style="width: 180px">
+                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_2'].'">
+                                                    </td>
+                                                    <td style="width: 180px">
+                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_3'].'">
+                                                    </td>
+                                                    <td style="width: 180px">
+                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_4'].'">
+                                                    </td>
+                                                    <td style="width: 200px">
+                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_5'].'">
+                                                    </td>
+                                                    
+                                                    <td style="width: 200px" class="text-center">
+                                                            <button type="submit" class="btn btn-sm btn-primary button-UPR" value="res-update-product-'.$upr.'">Actualizar</button>
+                                                            <div id="res-update-product-'.$upr.'" style="width: 100%; margin:0px; padding:0px;"></div>
+                                                    </td>
+                                                </tr>
+                                            </form>
+                                        </div>';
+                                            $upr=$upr+1;
                                         }
                                     ?>
-                                            </tbody>
-                                        </table>
-                  </div>
-                <!-- /.card-footer -->
-              </form>
-            </div>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-footer -->
+                        </div>
 
+                    </div>
 
+                </div>
+            </div> 
 
         </div>
                         <!-- /.col-md-6 -->

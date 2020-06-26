@@ -80,7 +80,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="reg_est.php" class="nav-link active">
+                                    <a href="reg_est.php" class="nav-link">
                                         
                                         <p>Registro Estudiantes</p>
                                     </a>
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="reg_adm.php" class="nav-link">
+                                    <a href="reg_adm.php" class="nav-link active">
                                         
                                         <p>Registro Administradores</p>
                                     </a>

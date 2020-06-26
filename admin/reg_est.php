@@ -174,7 +174,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="card-header p-0 pt-1 border-bottom-0">
                     <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Registro de Estudiantes</a>
+                            <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">
+                                Registro de Estudiante</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">
@@ -338,7 +339,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
 
                 </div>
-            </div>
+            </div> //////
 
         </div>
         <!-- /.col-md-6 -->

@@ -8,7 +8,7 @@ sleep(2);
 
 $nombre= $_POST['nombre-registro-est'];
 $correo= $_POST['correo-registro-est'];
-$contrasena= md5($_POST['contrasena-registro-est']);
+$contrasena= $_POST['contrasena-registro-est'];
 $codigo= $_POST['codigo-registro-est'];
 $cedula= $_POST['cedula-registro-est'];
 $semestre= $_POST['semestre-registro-est'];
