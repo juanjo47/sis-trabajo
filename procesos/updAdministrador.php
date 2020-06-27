@@ -5,9 +5,10 @@
 
 sleep(1);
 
+$idAdUP = $_POST['adm-id'];
 $nombreAdUp = $_POST['adm-nombre'];
 $correoAdUp = $_POST['adm-correo'];
-$idAdUP = $_POST['adm-id'];
+$codigoAdUp = $_POST['adm-codigo'];
 
 if(consultasSQL::UpdateSQL("administrador","nombre='$nombreAdUp',correo='$correoAdUp'", "ID_admin='$idAdUP'")){
     echo '
