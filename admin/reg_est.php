@@ -339,7 +339,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
 
                 </div>
-            </div> //////
+            </div> 
 
         </div>
         <!-- /.col-md-6 -->
