@@ -296,7 +296,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 
                                             echo '
                                                 <div>
-                                                  <form method="post" action="../procesos/updEstudiante.php" '.$upr.'">
+                                                  <form method="post" action="../procesos/updDocente.php" '.$upr.'">
                                             <tr>
                                                 <th style="width: 10px">ID</th>
                                                 <th style="width: 100px">Nombre Completo</th>
@@ -307,23 +307,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             </tr>
                                                 <tr>
                                                     <td>
-                                                        <input type="hidden" name="est-id" required="" value="'.$doc['ID_docente'].'"> 
+                                                        <input type="hidden" name="doc-id" required="" value="'.$doc['ID_docente'].'"> 
                                                         '.$doc['ID_docente'].'
                                                     </td>
                                                     <td style="width: 180px">
-                                                        <input style="width: 100%" type="text" name="est-nombre" required="" value="'.$doc['nombres'].'">
+                                                        <input style="width: 100%" type="text" name="doc-nombres" required="" value="'.$doc['nombres'].'">
                                                     </td>
                                                     <td style="width: 180px">
-                                                        <input style="width: 100%" type="text" name="est-correo" required="" value="'.$doc['correo'].'">
+                                                        <input style="width: 100%" type="text" name="doc-correo" required="" value="'.$doc['correo'].'">
                                                     </td >
                                                     <td style="width: 180px">
-                                                        <input style="width: 100%" type="text" name="est-carnet" required="" value="'.$doc['carnet'].'">
+                                                        <input style="width: 100%" type="text" name="doc-carnet" required="" value="'.$doc['carnet'].'">
                                                     </td>
                                                     <td style="width: 180px">
-                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['codigo_saga'].'">
+                                                        <input style="width: 100%" type="text" name="doc-codigo" required="" value="'.$doc['codigo_saga'].'">
                                                     </td>
                                                     <td style="width: 180px">
-                                                        <input  style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_1'].'">
+                                                        <input  style="width: 100%" type="text" name="doc-esp1" required="" value="'.$doc['especialidad_1'].'">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -337,16 +337,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <td>
                                                     </td>
                                                     <td style="width: 180px">
-                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_2'].'">
+                                                        <input style="width: 100%" type="text" name="doc-esp2" required="" value="'.$doc['especialidad_2'].'">
                                                     </td>
                                                     <td style="width: 180px">
-                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_3'].'">
+                                                        <input style="width: 100%" type="text" name="doc-esp3" required="" value="'.$doc['especialidad_3'].'">
                                                     </td>
                                                     <td style="width: 180px">
-                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_4'].'">
+                                                        <input style="width: 100%" type="text" name="doc-esp4" required="" value="'.$doc['especialidad_4'].'">
                                                     </td>
                                                     <td style="width: 200px">
-                                                        <input style="width: 100%" type="text" name="est-saga" required="" value="'.$doc['especialidad_5'].'">
+                                                        <input style="width: 100%" type="text" name="doc-esp5" required="" value="'.$doc['especialidad_5'].'">
                                                     </td>
                                                     
                                                     <td style="width: 200px" class="text-center">
