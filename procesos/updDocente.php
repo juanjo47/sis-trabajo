@@ -16,7 +16,7 @@ $esp3DocUp = $_POST['doc-esp3'];
 $esp4DocUp = $_POST['doc-esp4'];
 $esp5DocUp = $_POST['doc-esp5'];
 
-if(consultasSQL::UpdateSQL("docente","nombres='$nombreDocUP',correo='$correoDocUp',carnet='$carnetDocUp',codigo_saga='$codigoDocUp',especialidad_1='$esp1DocUp',especialidad_2='$esp2DocUp',especialidad_3='$esp3DocUp',especialidad_4='$esp4DocUp',especialidad_5='$esp5DocUp'", "ID_Docente='$idDocUP'")){
+if(consultasSQL::UpdateSQL("docente","nombres='$nombreDocUp',correo='$correoDocUp',carnet='$carnetDocUp',codigo_saga='$codigoDocUp',especialidad_1='$esp1DocUp',especialidad_2='$esp2DocUp',especialidad_3='$esp3DocUp',especialidad_4='$esp4DocUp',especialidad_5='$esp5DocUp'", "ID_Docente='$idDocUP'")){
     echo '
                 <script>  
                   var r = confirm("Docente actualizado con exito!");
