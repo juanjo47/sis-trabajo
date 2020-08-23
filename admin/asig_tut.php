@@ -186,7 +186,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             </div>
             <!-- Main content -->
-            
+
             <div class="card-body">
                 <div class="tab-content" id="custom-tabs-three-tabContent">
                     <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
@@ -194,52 +194,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- Registro de Trabajo de grado-->
 
                         <!-- Main content -->
-                         <div class="card card-info">
-                              <div class="card-header bg-navy color-palette">
+                        <div class="card card-info">
+                            <div class="card-header bg-navy color-palette">
                                 <h3 class="card-title">Asignacion Tutor</h3>
-                              </div>
-                              <!-- /.card-header -->
-                         <div style="width: 80%"class="card-body">
-                         <form action="asig_trib.php" method="post" >
-                                  <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
-                                       <input class="form-control" type="search" placeholder="Buscar estudiante" name="search1">
+                            </div>
+                            <!-- /.card-header -->
+                            <div style="width: 80%" class="card-body">
+                                <form action="asig_trib.php" method="post">
+                                    <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
+                                        <input class="form-control" type="search" placeholder="Buscar estudiante" name="search1">
                                         <div class="input-group-append">
-                                              <button class="btn btn-default" type="submit">
+                                            <button class="btn btn-default" type="submit">
                                                 <i class="fas fa-search"></i>
-                                             </button> 
-                                         </div>
-                                     </div>
-                             </form>
-                         </div>  
-                             <div style="width: 80%"class="card-body">
-                         <form action="asig_trib.php" method="post" >
-                                  <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
-                                       <input class="form-control" type="search" placeholder="Buscar Docente" name="search2">
-                                        <div class="input-group-append">
-                                              <button class="btn btn-default" type="submit">
-                                                <i class="fas fa-search"></i>
-                                             </button> 
-                                         </div>
-                                     </div>
-                             </form>
-                         </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
 
-                                                 
-                              <!-- form start -->
-                              <form method="post" action="../procesos/regTrib.php">
-                                  
-                                        
-                                        <div class="card-body p-0">
-                                            <table class="table table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>ID</th>
-                                                        <th>Nombre estudiante</th>
-                                                        <th>Codigo</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php 
+
+
+                            <form method="post" action="../procesos/regTrib.php">
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nombre estudiante</th>
+                                                <th>Codigo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php 
                                                         if(isset($_POST['search'])){
                                                             $searchq = $_POST['search'];
 
@@ -261,20 +247,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             }   
                                                         }
                                                     ?>
-                                                </tbody>
-                                            </table>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+
+
+
+                            <div style="width: 80%" class="card-body">
+                                <form action="asig_trib.php" method="post">
+                                    <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
+                                        <input class="form-control" type="search" placeholder="Buscar Docente" name="search2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-default" type="submit">
+                                                <i class="fas fa-search"></i>
+                                            </button>
                                         </div>
-                                        <div class="card-body p-0">
-                                            <table class="table table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>ID</th>
-                                                        <th>Nombre docente</th>
-                                                        <th>Codigo</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php 
+                                    </div>
+                                </form>
+                            </div>
+
+                            <form method="post" action="../procesos/regTrib.php">
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nombre docente</th>
+                                                <th>Codigo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php 
                                                         if(isset($_POST['search'])){
                                                             $searchq = $_POST['search'];
 
@@ -296,19 +300,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             }   
                                                         }
                                                     ?>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                  <button type="submit" class="btn bg-navy">Registrar</button>
-                                  <button type="submit" class="btn btn-default float-right">Cancel</button>
+                                    <button type="submit" class="btn bg-navy">Registrar</button>
+                                    <button type="submit" class="btn btn-default float-right">Cancel</button>
                                 </div>
                                 <!-- /.card-footer -->
-                              </form>
+                            </form>
                         </div>
-                        
+
                     </div>
+                    
+                    
                     <div class="tab-pane fade" id="custom-tabs-three-profile" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
 
 
@@ -316,55 +322,55 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
 
-                        <!-- Registro de Trabajo de grado-->
+                            <!-- Registro de Trabajo de grado-->
 
-                        <!-- Main content -->
-                         <div class="card card-info">
-                              <div class="card-header bg-navy color-palette">
-                                <h3 class="card-title">Asignacion Tutor</h3>
-                              </div>
-                              <!-- /.card-header -->
-                         <div style="width: 80%"class="card-body">
-                         <form action="asig_trab.php" method="post" >
-                                  <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
-                                       <input class="form-control" type="search" placeholder="Buscar estudiante" name="search1">
-                                        <div class="input-group-append">
-                                              <button class="btn btn-default" type="submit">
-                                                <i class="fas fa-search"></i>
-                                             </button> 
-                                         </div>
-                                     </div>
-                             </form>
-                         </div>  
-                             <div style="width: 80%"class="card-body">
-                         <form action="asig_trab.php" method="post" >
-                                  <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
-                                       <input class="form-control" type="search" placeholder="Buscar Docente" name="search2">
-                                        <div class="input-group-append">
-                                              <button class="btn btn-default" type="submit">
-                                                <i class="fas fa-search"></i>
-                                             </button> 
-                                         </div>
-                                     </div>
-                             </form>
-                         </div>
+                            <!-- Main content -->
+                            <div class="card card-info">
+                                <div class="card-header bg-navy color-palette">
+                                    <h3 class="card-title">Asignacion Tutor</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div style="width: 80%" class="card-body">
+                                    <form action="asig_trab.php" method="post">
+                                        <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
+                                            <input class="form-control" type="search" placeholder="Buscar estudiante" name="search1">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-default" type="submit">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div style="width: 80%" class="card-body">
+                                    <form action="asig_trab.php" method="post">
+                                        <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
+                                            <input class="form-control" type="search" placeholder="Buscar Docente" name="search2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-default" type="submit">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
 
-                                                 
-                              <!-- form start -->
-                              <form method="post" action="../procesos/regTrib.php">
-                                  
-                                        
-                                        <div class="card-body p-0">
-                                            <table class="table table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>ID</th>
-                                                        <th>Nombre estudiante</th>
-                                                        <th>Codigo</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php 
+
+                                <!-- form start -->
+                                <form method="post" action="../procesos/regTrib.php">
+
+
+                                    <div class="card-body p-0">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Nombre estudiante</th>
+                                                    <th>Codigo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php 
                                                         if(isset($_POST['search'])){
                                                             $searchq = $_POST['search'];
 
@@ -386,20 +392,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             }   
                                                         }
                                                     ?>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="card-body p-0">
-                                            <table class="table table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>ID</th>
-                                                        <th>Nombre estudiante</th>
-                                                        <th>Codigo</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php 
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Nombre estudiante</th>
+                                                    <th>Codigo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php 
                                                         if(isset($_POST['search'])){
                                                             $searchq = $_POST['search'];
 
@@ -421,29 +427,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             }   
                                                         }
                                                     ?>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                <!-- /.card-body -->
-                                <div class="card-footer">
-                                  <button type="submit" class="btn bg-navy">Registrar</button>
-                                  <button type="submit" class="btn btn-default float-right">Cancel</button>
-                                </div>
-                                <!-- /.card-footer -->
-                              </form>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.card-body -->
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn bg-navy">Registrar</button>
+                                        <button type="submit" class="btn btn-default float-right">Cancel</button>
+                                    </div>
+                                    <!-- /.card-footer -->
+                                </form>
+                            </div>
+
+
                         </div>
-                                
+                    </div>
 
+
+                    <!-- /.col-md-6 -->
                 </div>
-            </div> //////
-
-        
-                        <!-- /.col-md-6 -->
+            </div>
+        </div>
     </div>
-                                
 
-                    <!-- /.row -->
-          
+    <!-- /.row -->
+
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
