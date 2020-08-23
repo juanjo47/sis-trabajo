@@ -110,19 +110,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="asig_tut.php" class="nav-link">
 
-                                        <p>Asignacion de Tribunal</p>
+                                        <p>Asignacion de Tutor</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="asig_rev.php" class="nav-link">
 
-                                        <p>Asignacion de Trabajo</p>
+                                        <p>Asignacion de Revisores</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="asig_evi.php" class="nav-link">
 
                                         <p>Evidencia de asignaciones</p>
                                     </a>
@@ -140,15 +140,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="seg_trab" class="nav-link">
 
-                                        <p>Revision de documentos</p>
+                                        <p>Trabajos de Grado</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="seg_evi" class="nav-link">
 
-                                        <p>fechas de entrega</p>
+                                        <p>Evidencia de TG</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-close">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    Seguimiento de TG
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="seg_trab" class="nav-link">
+
+                                        <p>Trabajos de Grado</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="seg_evi" class="nav-link">
+
+                                        <p>Evidencia de TG</p>
                                     </a>
                                 </li>
 
@@ -202,36 +226,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <!-- /.card-header -->
                             <!-- form start -->
 
-                            <form method="post" action="../procesos/regEst.php">
+                            <form method="post" action="../procesos/regAdm.php">
                                 <div class="card-body">
                                     <div class="form-group row">
                                         <label for="inputnameAd" class="col-sm-2 col-form-label">Nombre Completo</label>
                                         <div class="col-sm-10">
-                                            <input name="nombre-registro-est" type="Name" class="form-control" placeholder="Nombre">
+                                            <input name="nombre-registro-adm" type="Name" class="form-control" placeholder="Nombre">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputemail" class="col-sm-2 col-form-label">Correo</label>
                                         <div class="col-sm-10">
-                                            <input name="correo-registro-est" type="email" class="form-control" placeholder="Correo">
+                                            <input name="correo-registro-adm" type="email" class="form-control" placeholder="Correo">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
                                         <div class="col-sm-10">
-                                            <input name="contrasena-registro-est" type="password" class="form-control" placeholder="Contraseña">
+                                            <input name="contrasena-registro-adm" type="password" class="form-control" placeholder="Contraseña">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 col-form-label">Codigo Saga</label>
                                         <div class="col-sm-10">
-                                            <input name="codigo-registro-est" type="text" class="form-control" placeholder="Codigo Saga">
+                                            <input name="codigo-registro-adm" type="text" class="form-control" placeholder="Codigo Saga">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 col-form-label">Cedula</label>
                                         <div class="col-sm-10">
-                                            <input name="cedula-registro-est" type="text" class="form-control" placeholder="Cedula de Identificacion">
+                                            <input name="cedula-registro-adm" type="text" class="form-control" placeholder="Cedula de Identificacion">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-2 col-form-label">Nivel</label>
+                                        <div class="col-sm-10">
+                                            <input name="nivel-registro-adm" type="text" class="form-control" placeholder="establezca nivel 1 o dos">
                                         </div>
                                     </div>
                                 </div>

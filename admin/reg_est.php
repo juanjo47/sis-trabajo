@@ -110,19 +110,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="asig_trib.php" class="nav-link">
 
                                         <p>Asignacion de Tribunal</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="asig_trab.php" class="nav-link">
 
                                         <p>Asignacion de Trabajo</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="asig_evi.php" class="nav-link">
 
                                         <p>Evidencia de asignaciones</p>
                                     </a>

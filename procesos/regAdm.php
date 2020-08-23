@@ -6,29 +6,29 @@ sleep(2);
 
 
 
-$nombre= $_POST['nombre-registro-est'];
-$correo= $_POST['correo-registro-est'];
-$contrasena= $_POST['contrasena-registro-est'];
-$codigo= $_POST['codigo-registro-est'];
-$cedula= $_POST['cedula-registro-est'];
-$semestre= $_POST['semestre-registro-est'];
+$nombre= $_POST['nombre-registro-adm'];
+$correo= $_POST['correo-registro-adm'];
+$contrasena= $_POST['contrasena-registro-adm'];
+$codigo= $_POST['codigo-registro-adm'];
+$cedula= $_POST['cedula-registro-adm'];
+$nivel= $_POST['nivel-registro-adm'];
 
 $estado = 1;
 
-if(!$nombre=="" && !$correo=="" && !$contrasena=="" && !$codigo=="" && !$cedula=="" && !$semestre==""){
-    $verificar=  ejecutarSQL::consultar("select * from estudiante where correo='".$correo."'");
+if(!$nombre=="" && !$correo=="" && !$contrasena=="" && !$codigo=="" && !$cedula=="" && !$nivel==""){
+    $verificar=  ejecutarSQL::consultar("select * from administrador where correo='".$correo."'");
     $verificaltotal = mysqli_num_rows($verificar);
     
     if($verificaltotal<=0){
         // en vez de usuario pones estudiante
-        if(consultasSQL::InsertSQL("estudiante", "nombres, correo, contraseña, codigo_saga, carnet, semestre, estado", "'$nombre','$correo','$contrasena','$codigo','$cedula','$semestre','$estado'")){
+        if(consultasSQL::InsertSQL("administrador", "nombres, correo, contraseña, codigo_saga, carnet, nivel, estado", "'$nombre','$correo','$contrasena','$codigo','$cedula','$niivel','$estado'")){
             echo '
                 <script>  
                   var r = confirm("Se registro con exito");
                   if (r == true) {
-                    location.href="../admin/reg_est.php";
+                    location.href="../admin/reg_adm.php";
                   } else {
-                    location.href="../admin/reg_est.php";
+                    location.href="../admin/reg_adm.php";
                   }
                 
                 </script>
@@ -38,9 +38,9 @@ if(!$nombre=="" && !$correo=="" && !$contrasena=="" && !$codigo=="" && !$cedula=
                 <script>  
                   var r = confirm("Ha ocurrido un error.<br>Por favor intente nuevamente");
                   if (r == true) {
-                    location.href="../admin/reg_est.php";
+                    location.href="../admin/reg_adm.php";
                   } else {
-                    location.href="../admin/reg_est.php";
+                    location.href="../admin/reg_adm.php";
                   }
                 
                 </script>
