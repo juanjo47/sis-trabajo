@@ -40,4 +40,15 @@ class consultasSQL{
         }
         return $consul;
     }
+    public static function UpdJoinSQL($tabla1, $tabla2, $cond1, $campos, $condicion) {
+        if (!$consul = ejecutarSQL::consultar("update $tabla1 inner join $tabla2 on $cond1 set $campos where $condicion")) {
+            die("Ha ocurrido un error al actualizar los datos en la tabla $tabla1");
+        }
+        return $consul;
+    }
 }
+
+//if(consultasSQL::InsertSQL("trabajo", "titulo, descripcion, area_desempeno, tipo", "'$titulo','$descripcion','$area','$tipo'")){
+//               
+//if(ejecutarSQL::consultar("estudiante", "trabajo", "trabajo.titulo='$titulo' and estudiante.ID_estudiante='$idestt'"," est.trabajo=trab.ID_trabajo")){
+ 

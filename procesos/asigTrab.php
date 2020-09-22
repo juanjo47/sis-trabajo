@@ -1,9 +1,9 @@
 <?php
-include '../conexion/configServer.php';
 include '../conexion/consulSQL.php';
+include '../conexion/configServer.php';
+
 
 sleep(2);
-
 
 
 $titulo= $_POST['titulo-registro-trab'];
@@ -20,40 +20,33 @@ if(!$titulo=="" && !$descripcion=="" && !$area=="" && !$tipo=="" && !$idestt==""
     if($verificaltotal<=0){
         // en vez de usuario pones estudiante
         if(consultasSQL::InsertSQL("trabajo", "titulo, descripcion, area_desempeno, tipo", "'$titulo','$descripcion','$area','$tipo'")){
-            
-            echo '
-                <script>  
-                  var r = confirm("Se registro con exito");
-                  if (r == true) {
-                    location.href="../admin/asig_trab.php";
-                  } else {
-                    location.href="../admin/asig_trab.php";
-                  }
-                
-                </script>
-            ';
-            $recuperar=  ejecutarSQL::consultar("select ID_trabajo from trabajo where titulo='".$titulo."'");
-            if(consultasSQL::UpdateSQL("estudiante","especialidad_5='$recuperar'", "ID_estudiante='$idestt'")){
-            echo '
-                <script>  
+//            consultasSQL::UpdJoinSQL("estudiante", "trabajo", "trabajo.titulo='$titulo'", "est.trabajo = trab.ID_trabajo", "estudiante.ID_estudiante='$idestt'")   
+//            mysqli_connect(SERVER,USER,PASS);
+//            mysql_query(BD, "UPDATE estudiante JOIN trabajo ON trabajo.titulo='".$titulo."' SET estudiante.trabajo = trabajo.ID_trabajo WHERE estudiante.ID_estudiante='".$idestt."'")
+            $recup =  ejecutarSQL::consultar("select ID_trabajo from trabajo where titulo='".$titulo."'");
+            $recuperar = mysqli_fetch_row($recup);
+            if(consultasSQL::UpdateSQL("estudiante","trabajo='$recuperar[0]'", "ID_estudiante='$idestt'")){
+                echo '
+                <script>
                   var r = confirm("Se asigno con exito");
                   if (r == true) {
-                    location.href="../admin/asig_trab.php";
+                    location.href="../admin/seg_trab.php";
                   } else {
-                    location.href="../admin/asig_trab.php";
+                    location.href="../admin/seg_trab.php";
                   }
                 
                 </script>
-            ';
+                ';
             }
-        }else{
+        }
+        else{
             echo '
                 <script>  
                   var r = confirm("Ha ocurrido un error.<br>Por favor intente nuevamente");
                   if (r == true) {
-                    location.href="../admin/asig_trab.php";
+                    location.href="../admin/seg_trab.php";
                   } else {
-                    location.href="../admin/asig_trab.php";
+                    location.href="../admin/seg_trab.php";
                   }
                 
                 </script>
@@ -65,4 +58,3 @@ if(!$titulo=="" && !$descripcion=="" && !$area=="" && !$tipo=="" && !$idestt==""
 }else {
     echo '<br>Error los campos no deben de estar vacíos';
 }
-

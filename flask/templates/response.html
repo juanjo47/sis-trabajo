@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bot Response</title>
+</head>
+<body>
+	<h1>Respuesta del bot: </h1>
+	<p>{{content}}</p>
+	<h1>Consulta al bot</h1>
+	
+	<form action="/botrequest" method="POST">
+		<label for="fname">Inserte su pregunta:</label><br>
+		<input type="text" id="fname" name="rq" ><br>
+		<input type="submit" value="Preguntar">
+	</form>
+</body>
+</html>

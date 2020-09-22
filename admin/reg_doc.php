@@ -72,7 +72,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link">
-                                
+
                                 <p>
                                     Gestion de Usuarios
                                     <i class="right fas fa-angle-left"></i>
@@ -81,28 +81,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="reg_est.php" class="nav-link">
-                                        
+
                                         <p>Registro Estudiantes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="reg_doc.php" class="nav-link active">
-                                        
+                                    <a href="reg_doc.php" class="nav-link">
+
                                         <p>Registro Docentes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="reg_adm.php" class="nav-link">
-                                        
+                                    <a href="reg_adm.php" class="nav-link active">
+
                                         <p>Registro Administradores</p>
                                     </a>
                                 </li>
-                                
+
                             </ul>
                         </li>
                         <li class="nav-item has-treeview menu-close">
                             <a href="#" class="nav-link">
-                                
+
                                 <p>
                                     Gestion de Tribunal
                                     <i class="right fas fa-angle-left"></i>
@@ -110,29 +110,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="asig_trib.php" class="nav-link">
-                                        
-                                        <p>Asignacion de Tribunal</p>
+                                    <a href="asig_tut.php" class="nav-link">
+
+                                        <p>Asignacion de Tutor</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="asig_trab.php" class="nav-link">
-                                        
-                                        <p>Asignacion de Trabajo</p>
+                                    <a href="asig_rev.php" class="nav-link">
+
+                                        <p>Asignacion de Revisores</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="asig_evi.php" class="nav-link">
-                                        
+
                                         <p>Evidencia de asignaciones</p>
                                     </a>
                                 </li>
-                                
+
                             </ul>
                         </li>
                         <li class="nav-item has-treeview menu-close">
                             <a href="#" class="nav-link">
-                                
+
                                 <p>
                                     Seguimiento de TG
                                     <i class="right fas fa-angle-left"></i>
@@ -140,31 +140,55 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        
-                                        <p>Revision de documentos</p>
+                                    <a href="seg_trab.php" class="nav-link">
+
+                                        <p>Trabajos de Grado</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        
-                                        <p>fechas de entrega</p>
+                                    <a href="seg_evi.php" class="nav-link">
+
+                                        <p>Evidencia de TG</p>
                                     </a>
                                 </li>
-                                
+
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-close">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    Generacion de Reportes
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="rev_trab.php" class="nav-link">
+
+                                        <p>Revision de TG</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="rev_doc.php" class="nav-link">
+
+                                        <p>Documentos de Revision</p>
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
                     </ul>
                 </nav>
-                
-                
+
+
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
-             <div class="content-wrapper" style="width: 100%">
+             <div class="content-wrapper">
                         <!-- Content Header (Page header) -->
                         <!-- /.content-header -->
 
@@ -203,61 +227,79 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="form-group row">
                                 <label for="inputnameAd" class="col-sm-2 col-form-label">Nombre</label>
                                 <div class="col-sm-10">
-                                  <input name="nombre-registro-doc" type="Name" class="form-control" placeholder="Nombres y Apellidos"  style="width: 60%">
+                                  <input name="nombre-registro-doc" type="Name" class="form-control" placeholder="Nombres y Apellidos">
                                 </div>
                               </div>
                                 <div class="form-group row">
                                 <label for="inputemail" class="col-sm-2 col-form-label">Correo</label>
                                 <div class="col-sm-10">
-                                  <input name="correo-registro-doc" type="email" class="form-control" placeholder="Correo" style="width: 60%">
+                                  <input name="correo-registro-doc" type="email" class="form-control" placeholder="Correo">
                                 </div>
                               </div>
                                 <div class="form-group row">
                                 <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
                                 <div class="col-sm-10">
-                                  <input name="contrasena-registro-doc" type="password" class="form-control" placeholder="Contraseña" style="width: 60%">
+                                  <input name="contrasena-registro-doc" type="password" class="form-control" placeholder="Contraseña">
                                 </div>
                               </div>
                              <div class="form-group row">
                                 <label for="inputPassword3" class="col-sm-2 col-form-label">Codigo Saga</label>
                                 <div class="col-sm-10">
-                                  <input name="codigo-registro-doc" type="texto" class="form-control" placeholder="Codigo Saga" style="width: 60%">
+                                  <input name="codigo-registro-doc" type="texto" class="form-control" placeholder="Codigo Saga">
                                 </div>
                               </div>
                                 <div class="form-group row">
                                 <label for="inputPassword3" class="col-sm-2 col-form-label">Cedula</label>
                                 <div class="col-sm-10">
-                                  <input name="cedula-registro-doc" type="texto" class="form-control" placeholder="Cedula de Identificacion" style="width: 60%">
+                                  <input name="cedula-registro-doc" type="texto" class="form-control" placeholder="Cedula de Identificacion">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Años en educacion</label>
+                                <div class="col-sm-10">
+                                  <input name="especialidad1-registro-doc" type="texto" class="form-control" placeholder="Primer Area Especialidad y Principal Enfoque">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Profesion</label>
+                                <div class="col-sm-10">
+                                  <input name="especialidad1-registro-doc" type="texto" class="form-control" placeholder="Primer Area Especialidad y Principal Enfoque">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Estudio Superior</label>
+                                <div class="col-sm-10">
+                                  <input name="especialidad2-registro-doc" type="texto" class="form-control" placeholder="Segunda Area de Especialidad">
+                                </div>
+                              </div>
+                                <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Estudio Superior</label>
+                                <div class="col-sm-10">
+                                  <input name="especialidad3-registro-doc" type="texto" class="form-control" placeholder="Tercer Area de Especialidad">
                                 </div>
                               </div>
                                 <div class="form-group row">
                                 <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
                                 <div class="col-sm-10">
-                                  <input name="especialidad1-registro-doc" type="texto" class="form-control" placeholder="Primer Area Especialidad y Principal Enfoque" style="width: 60%">
+                                  <input name="especialidad4-registro-doc" type="texto" class="form-control" placeholder="Cuarta Area de Especialidad">
                                 </div>
                               </div>
                                 <div class="form-group row">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Experiencia Laboral</label>
                                 <div class="col-sm-10">
-                                  <input name="especialidad2-registro-doc" type="texto" class="form-control" placeholder="Segunda Area de Especialidad" style="width: 60%">
+                                  <input name="especialidad5-registro-doc" type="Codigo" class="form-control" placeholder="Quinta Area de  Especialidad">
                                 </div>
                               </div>
                                 <div class="form-group row">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Experiencia Laboral</label>
                                 <div class="col-sm-10">
-                                  <input name="especialidad3-registro-doc" type="texto" class="form-control" placeholder="Tercer Area de Especialidad" style="width: 60%">
+                                  <input name="especialidad5-registro-doc" type="Codigo" class="form-control" placeholder="Quinta Area de  Especialidad">
                                 </div>
                               </div>
                                 <div class="form-group row">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Experiencia Laboral</label>
                                 <div class="col-sm-10">
-                                  <input name="especialidad4-registro-doc" type="texto" class="form-control" placeholder="Cuarta Area de Especialidad" style="width: 60%">
-                                </div>
-                              </div>
-                                <div class="form-group row">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">Especialidad</label>
-                                <div class="col-sm-10">
-                                  <input name="especialidad5-registro-doc" type="Codigo" class="form-control" placeholder="Quinta Area de  Especialidad" style="width: 60%">
+                                  <input name="especialidad5-registro-doc" type="Codigo" class="form-control" placeholder="Quinta Area de  Especialidad">
                                 </div>
                               </div>
                             </div>

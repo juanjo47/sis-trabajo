@@ -80,7 +80,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="reg_est.php" class="nav-link active">
+                                    <a href="reg_est.php" class="nav-link">
 
                                         <p>Registro Estudiantes</p>
                                     </a>
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="reg_adm.php" class="nav-link">
+                                    <a href="reg_adm.php" class="nav-link active">
 
                                         <p>Registro Administradores</p>
                                     </a>
@@ -110,15 +110,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="asig_trib.php" class="nav-link">
+                                    <a href="asig_tut.php" class="nav-link">
 
-                                        <p>Asignacion de Tribunal</p>
+                                        <p>Asignacion de Tutor</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="asig_trab.php" class="nav-link">
+                                    <a href="asig_rev.php" class="nav-link">
 
-                                        <p>Asignacion de Trabajo</p>
+                                        <p>Asignacion de Revisores</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -140,15 +140,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="seg_trab.php" class="nav-link">
 
-                                        <p>Revision de documentos</p>
+                                        <p>Trabajos de Grado</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="seg_evi.php" class="nav-link">
 
-                                        <p>fechas de entrega</p>
+                                        <p>Evidencia de TG</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-close">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    Generacion de Reportes
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="rev_trab.php" class="nav-link">
+
+                                        <p>Revision de TG</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="rev_doc.php" class="nav-link">
+
+                                        <p>Documentos de Revision</p>
                                     </a>
                                 </li>
 

@@ -140,13 +140,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="seg_trab" class="nav-link">
+                                    <a href="seg_trab.php" class="nav-link">
 
                                         <p>Trabajos de Grado</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="seg_evi" class="nav-link">
+                                    <a href="seg_evi.php" class="nav-link">
 
                                         <p>Evidencia de TG</p>
                                     </a>
@@ -158,21 +158,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="#" class="nav-link">
 
                                 <p>
-                                    Seguimiento de TG
+                                    Generacion de Reportes
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="seg_trab" class="nav-link">
+                                    <a href="rev_trab.php" class="nav-link">
 
-                                        <p>Trabajos de Grado</p>
+                                        <p>Revision de TG</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="seg_evi" class="nav-link">
+                                    <a href="rev_doc.php" class="nav-link">
 
-                                        <p>Evidencia de TG</p>
+                                        <p>Documentos de Revision</p>
                                     </a>
                                 </li>
 

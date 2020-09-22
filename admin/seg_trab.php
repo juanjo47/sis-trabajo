@@ -70,7 +70,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <p>Inicio</p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview menu-close">
+                        <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link">
 
                                 <p>
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="reg_adm.php" class="nav-link">
+                                    <a href="reg_adm.php" class="nav-link active">
 
                                         <p>Registro Administradores</p>
                                     </a>
@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview menu-open">
+                        <li class="nav-item has-treeview menu-close">
                             <a href="#" class="nav-link">
 
                                 <p>
@@ -110,19 +110,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="asig_tut.php" class="nav-link">
 
-                                        <p>Asignacion de Tribunal</p>
+                                        <p>Asignacion de Tutor</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="asig_trab.php" class="nav-link active">
+                                    <a href="asig_rev.php" class="nav-link">
 
-                                        <p>Asignacion de Trabajo</p>
+                                        <p>Asignacion de Revisores</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="asig_evi.php" class="nav-link">
 
                                         <p>Evidencia de asignaciones</p>
                                     </a>
@@ -140,15 +140,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="seg_trab.php" class="nav-link">
 
-                                        <p>Revision de documentos</p>
+                                        <p>Trabajos de Grado</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="seg_evi.php" class="nav-link">
 
-                                        <p>fechas de entrega</p>
+                                        <p>Evidencia de TG</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-close">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    Generacion de Reportes
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="rev_trab.php" class="nav-link">
+
+                                        <p>Revision de TG</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="rev_doc.php" class="nav-link">
+
+                                        <p>Documentos de Revision</p>
                                     </a>
                                 </li>
 
@@ -200,9 +224,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               </div>
                               <!-- /.card-header -->
                          <div style="width: 80%"class="card-body">
-                         <form action="asig_trab.php" method="post" >
+                         <form action="seg_trab.php" method="post" >
                                   <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
-                                       <input class="form-control" type="search" placeholder="Buscar estudiante" name="search">
+                                       <input class="form-control" type="search" placeholder="Buscar estudiante" name="search1">
                                         <div class="input-group-append">
                                               <button class="btn btn-default" type="submit">
                                                 <i class="fas fa-search"></i>
@@ -214,9 +238,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                                  
                               <!-- form start -->
-                              <form method="post" action="../procesos/regTrab.php">
-                                  
-                                        
+                              <form method="post" action="../procesos/asigtrab.php">   
                                         <div class="card-body p-0">
                                             <table class="table table-striped">
                                                 <thead>
@@ -228,8 +250,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 </thead>
                                                 <tbody>
                                                     <?php 
-                                                        if(isset($_POST['search'])){
-                                                            $searchq = $_POST['search'];
+                                                        if(isset($_POST['search1'])){
+                                                            $searchq = $_POST['search1'];
 
                                                         $bestudiante =  ejecutarSQL::consultar("select * from estudiante where codigo_saga LIKE '$searchq'");
                                                         while($best=mysqli_fetch_array($bestudiante)){
@@ -237,14 +259,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 echo '            
                                                                     <tr style=width: 100%>
                                                                         <td>
-                                                                        <input type="hidden" name="id-estt-trab" required="" value="'.$best['ID_estudiante'].'"> 
+                                                                            <input type="hidden" name="id-estt-trab" required="" value="'.$best['ID_estudiante'].'"> 
                                                                             '.$best['ID_estudiante'].'
                                                                         </td>
                                                                         <td>'.$best['nombres'].'</td>
                                                                         <td>'.$best['codigo_saga'].'</td>
-                                                                        
-                                                                        
-                                                                    </tr>';
+                                                                       
+                                                                    </tr>'
+                                                                    
+                                                                    ;
 
                                                             }   
                                                         }
@@ -252,12 +275,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 </tbody>
                                             </table>
                                         </div>
-                                    
+<!--
+                                  </form>
+                             
+                             
+                            <form method="post" action="../procesos/regTrab.php">    
+-->
                                 <div class="card-body">
                                   <div class="form-group row">
                                     <label for="inputnameAd" class="col-sm-2 col-form-label">Titulo</label>
                                     <div class="col-sm-10">
-                                      <input name="titulo-registro-trab" type="Name" class="form-control"  placeholder="Nombre">
+                                      <input name="titulo-registro-trab" type="Name" class="form-control"  placeholder="Nombre" value = "">
                                     </div>
                                   </div>
                                     <div class="form-group row">
@@ -293,6 +321,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                       </div>
                                     </div>
                                   </div>
+<!--
+                                    <div class="form-group row">
+                                    <label for="inputnameAd" class="col-sm-2 col-form-label">Codigo</label>
+                                    <div class="col-sm-10">
+                                      <input name="id-estt-trab" type="Name" class="form-control"  placeholder="Codigo del estudiante" value = "">
+                                    </div>
+                                  </div>
+-->
                                     <!-- SEARCH FORM -->     
                                 </div>
                                 <!-- /.card-body -->
@@ -383,7 +419,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 
 
                 </div>
-            </div> //////
+            </div>
             
 
         </div>

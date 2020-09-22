@@ -70,7 +70,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <p>Inicio</p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview menu-close">
+                        <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link">
 
                                 <p>
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="reg_adm.php" class="nav-link">
+                                    <a href="reg_adm.php" class="nav-link active">
 
                                         <p>Registro Administradores</p>
                                     </a>
@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview menu-open">
+                        <li class="nav-item has-treeview menu-close">
                             <a href="#" class="nav-link">
 
                                 <p>
@@ -110,15 +110,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="asig_trib.php" class="nav-link active">
+                                    <a href="asig_tut.php" class="nav-link">
 
-                                        <p>Asignacion de Tribunal</p>
+                                        <p>Asignacion de Tutor</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="asig_trab.php" class="nav-link">
+                                    <a href="asig_rev.php" class="nav-link">
 
-                                        <p>Asignacion de Trabajo</p>
+                                        <p>Asignacion de Revisores</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -140,15 +140,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="seg_trab.php" class="nav-link">
 
-                                        <p>Revision de documentos</p>
+                                        <p>Trabajos de Grado</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="seg_evi.php" class="nav-link">
 
-                                        <p>fechas de entrega</p>
+                                        <p>Evidencia de TG</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-close">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    Generacion de Reportes
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="http://127.0.0.1:5000/" class="nav-link">
+
+                                        <p>Revision de TG</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="rev_doc.php" class="nav-link">
+
+                                        <p>Documentos de Revision</p>
                                     </a>
                                 </li>
 
@@ -177,7 +201,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">
-                                Asignacion Revisor
+                                Modificacion de Tutor
                             </a>
                         </li>
                     </ul>
@@ -200,9 +224,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <!-- /.card-header -->
                             <div style="width: 80%" class="card-body">
-                                <form action="asig_trib.php" method="post">
+                                <form action="asig_tut.php" method="post">
                                     <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
-                                        <input class="form-control" type="search" placeholder="Buscar estudiante" name="search1">
+                                        <input class="form-control" type="search" placeholder="Verificar estudiante mediante Codigo saga" name="search1">
                                         <div class="input-group-append">
                                             <button class="btn btn-default" type="submit">
                                                 <i class="fas fa-search"></i>
@@ -214,7 +238,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
-                            <form method="post" action="../procesos/regTrib.php">
+                            <form method="post" action="../procesos/asig_tut.php">
                                 <div class="card-body p-0">
                                     <table class="table table-striped">
                                         <thead>
@@ -226,27 +250,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </thead>
                                         <tbody>
                                             <?php 
-                                                        if(isset($_POST['search'])){
-                                                            $searchq = $_POST['search'];
-
-                                                        $bestudiante =  ejecutarSQL::consultar("select * from estudiante where codigo_saga LIKE '$searchq'");
-                                                        while($best=mysqli_fetch_array($bestudiante)){
-                                                        
-                                                                echo '            
-                                                                    <tr style=width: 100%>
-                                                                        <td>
-                                                                        <input type="hidden" name="id-estt-trab" required="" value="'.$best['ID_estudiante'].'"> 
-                                                                            '.$best['ID_estudiante'].'
-                                                                        </td>
-                                                                        <td>'.$best['nombres'].'</td>
-                                                                        <td>'.$best['codigo_saga'].'</td>
-                                                                        
-                                                                        
-                                                                    </tr>';
-
-                                                            }   
-                                                        }
-                                                    ?>
+                                                if(isset($_POST['search1'])){
+                                                    $searchq1 = $_POST['search1'];
+                                                    $bestudiante =  ejecutarSQL::consultar("select * from estudiante where codigo_saga LIKE '$searchq1'");
+                                                    while($best=mysqli_fetch_array($bestudiante)){    
+                                                        echo '            
+                                                        <tr style=width: 100%>
+                                                            <td>'.$best['ID_estudiante'].'  </td>
+                                                            <td>'.$best['nombres'].'        </td>
+                                                            <td>'.$best['codigo_saga'].'    </td>
+                                                        </tr>';
+                                                    }   
+                                                }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -255,9 +271,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
                             <div style="width: 80%" class="card-body">
-                                <form action="asig_trib.php" method="post">
+                                <form  method="post" action="asig_tut.php">
                                     <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
-                                        <input class="form-control" type="search" placeholder="Buscar Docente" name="search2">
+                                        <input class="form-control" type="search" placeholder="Buscar Docente por Nombre o Apellido" name="search2">
                                         <div class="input-group-append">
                                             <button class="btn btn-default" type="submit">
                                                 <i class="fas fa-search"></i>
@@ -267,7 +283,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </form>
                             </div>
 
-                            <form method="post" action="../procesos/regTrib.php">
+                            <form method="post" action="../procesos/asig_tut.php">
                                 <div class="card-body p-0">
                                     <table class="table table-striped">
                                         <thead>
@@ -279,31 +295,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </thead>
                                         <tbody>
                                             <?php 
-                                                        if(isset($_POST['search'])){
-                                                            $searchq = $_POST['search'];
+                                                if(isset($_POST['search2'])){
+                                                    $searchq2 = $_POST['search2'];
+                                                    $bdocente =  ejecutarSQL::consultar("select * from docente where nombres LIKE '%$searchq2%'");
+                                                    while($bdoc=mysqli_fetch_array($bdocente)){
+                                                        echo '            
+                                                            <tr style=width: 100%>
+                                                                <td>'.$bdoc['ID_docente'].'</td>
+                                                                <td>'.$bdoc['nombres'].'</td>
+                                                                <td>'.$bdoc['codigo_saga'].'</td>        
+                                                            </tr>';
 
-                                                        $bdocente =  ejecutarSQL::consultar("select * from docente where especialidad LIKE '$searchq'");
-                                                        while($bdoc=mysqli_fetch_array($bdocente)){
-                                                        
-                                                                echo '            
-                                                                    <tr style=width: 100%>
-                                                                        <td>
-                                                                        <input type="hidden" name="id-doct-trab" required="" value="'.$bdoc['ID_estudiante'].'"> 
-                                                                            '.$bdoc['ID_estudiante'].'
-                                                                        </td>
-                                                                        <td>'.$bdoc['nombres'].'</td>
-                                                                        <td>'.$bdoc['codigo_saga'].'</td>
-                                                                        
-                                                                        
-                                                                    </tr>';
-
-                                                            }   
-                                                        }
-                                                    ?>
+                                                    }   
+                                                }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>
+                                </form>
+                            <br>
                                 <!-- /.card-body -->
+                                <form method="post" action="../procesos/asigTutor.php">
+                                <div class="form-group row card-body" style="width: 90%">
+                                    <div class="form-group row col-6">
+                                        <label for="inputnameAd" class="col-sm-4 col-form-label">Codigo Est.</label>
+                                        <div class="col-sm-8">
+                                            <input name="est-cod" type="Name" class="form-control"  placeholder="Codigo del estudiante">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row col-6">
+                                        <label for="inputnameAd" class="col-sm-4 col-form-label">Codigo Doc.</label>
+                                        <div class="col-sm-8">
+                                            <input name="doc-cod" type="Name" class="form-control"  placeholder="Codigo del docente">
+                                        </div>
+                                    </div>
+                                </div>
+                                
                                 <div class="card-footer">
                                     <button type="submit" class="btn bg-navy">Registrar</button>
                                     <button type="submit" class="btn btn-default float-right">Cancel</button>
@@ -311,6 +338,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <!-- /.card-footer -->
                             </form>
                         </div>
+                        
 
                     </div>
                     
@@ -323,121 +351,63 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
 
                             <!-- Registro de Trabajo de grado-->
+                            <div class="card card-info">
+                            <div class="card-header bg-navy color-palette">
+                                <h3 class="card-title">Modificar Tutor</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                                <div class="card-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 30px">ID_Est</th>
+                                                <th>Nombre Estudiante</th>
+                                                <th style="width: 30px">ID_Doc</th>
+                                                <th>Nombre Docente</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php 
+                                        $estudiantes =  ejecutarSQL::consultar("Select est.ID_estudiante, est.nombres as nombre_est, est.tutor, doc.ID_docente, doc.nombres as nombre_doc FROM estudiante est LEFT JOIN docente doc on est.tutor = doc.ID_docente");
+                                        $upr=1;
+                                        while($est=mysqli_fetch_array($estudiantes)){
+                                            echo'
+                                            <div>
+                                                <form method="post" action="../procesos/updEstudiante.php" '.$upr.'">
+                                                    <tr>
+                                                        <td>
+                                                            <input style="width:30px" type="hidden" name="est-id" required="" value="'.$est['ID_estudiante'].'"> 
+                                                            '.$est['ID_estudiante'].'
+                                                        </td>
+                                                        <td >
+                                                            '.$est['nombre_est'].'
+                                                        </td>
+                                                        <td>
+                                                            <input style="width: 30px" type="text" name="tutor" required="" value="'.$est['tutor'].'">
+                                                        </td>
+                                                        <td>
+                                                            '.$est['nombre_doc'].'
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <button type="submit" class="btn btn-sm btn-primary button-UPR" value="res-update-product-'.$upr.'">Actualizar</button>
+                                                            <div id="res-update-product-'.$upr.'" style="width: 100%; margin:0px; padding:0px;"></div>
+                                                        </td>
+                                                    </tr>
+                                                </form>
+                                            </div>';
+                                            $upr=$upr+1;
+                                        };
+                                        ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-footer -->
+                        </div>
 
                             <!-- Main content -->
-                            <div class="card card-info">
-                                <div class="card-header bg-navy color-palette">
-                                    <h3 class="card-title">Asignacion Tutor</h3>
-                                </div>
-                                <!-- /.card-header -->
-                                <div style="width: 80%" class="card-body">
-                                    <form action="asig_trab.php" method="post">
-                                        <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
-                                            <input class="form-control" type="search" placeholder="Buscar estudiante" name="search1">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-default" type="submit">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div style="width: 80%" class="card-body">
-                                    <form action="asig_trab.php" method="post">
-                                        <div class="input-group input-group-sm" style="margin-top:30px; margin-left:0px;">
-                                            <input class="form-control" type="search" placeholder="Buscar Docente" name="search2">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-default" type="submit">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-
-
-                                <!-- form start -->
-                                <form method="post" action="../procesos/regTrib.php">
-
-
-                                    <div class="card-body p-0">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th>Nombre estudiante</th>
-                                                    <th>Codigo</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php 
-                                                        if(isset($_POST['search'])){
-                                                            $searchq = $_POST['search'];
-
-                                                        $bestudiante =  ejecutarSQL::consultar("select * from estudiante where codigo_saga LIKE '$searchq'");
-                                                        while($best=mysqli_fetch_array($bestudiante)){
-                                                        
-                                                                echo '            
-                                                                    <tr style=width: 100%>
-                                                                        <td>
-                                                                        <input type="hidden" name="id-estt-trab" required="" value="'.$best['ID_estudiante'].'"> 
-                                                                            '.$best['ID_estudiante'].'
-                                                                        </td>
-                                                                        <td>'.$best['nombres'].'</td>
-                                                                        <td>'.$best['codigo_saga'].'</td>
-                                                                        
-                                                                        
-                                                                    </tr>';
-
-                                                            }   
-                                                        }
-                                                    ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="card-body p-0">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th>Nombre estudiante</th>
-                                                    <th>Codigo</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php 
-                                                        if(isset($_POST['search'])){
-                                                            $searchq = $_POST['search'];
-
-                                                        $bdocente =  ejecutarSQL::consultar("select * from docente where especialidad LIKE '$searchq'");
-                                                        while($bdoc=mysqli_fetch_array($bdocente)){
-                                                        
-                                                                echo '            
-                                                                    <tr style=width: 100%>
-                                                                        <td>
-                                                                        <input type="hidden" name="id-doct-trab" required="" value="'.$bdoc['ID_estudiante'].'"> 
-                                                                            '.$bdoc['ID_estudiante'].'
-                                                                        </td>
-                                                                        <td>'.$bdoc['nombres'].'</td>
-                                                                        <td>'.$bdoc['codigo_saga'].'</td>
-                                                                        
-                                                                        
-                                                                    </tr>';
-
-                                                            }   
-                                                        }
-                                                    ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- /.card-body -->
-                                    <div class="card-footer">
-                                        <button type="submit" class="btn bg-navy">Registrar</button>
-                                        <button type="submit" class="btn btn-default float-right">Cancel</button>
-                                    </div>
-                                    <!-- /.card-footer -->
-                                </form>
-                            </div>
+                            
 
 
                         </div>

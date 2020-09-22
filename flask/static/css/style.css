@@ -1,0 +1,57 @@
+.bg-nav{
+background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.bg-nav-light{
+	background: #24498d;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	
+	}
+
+.mt-50
+{
+	margin-top:50px;
+
+}
+
+
+.warning{
+background: #BBD2C5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#bocadillo {
+padding: 10px;
+width: 220px;
+border­radius: 10px;
+background­color: #f80;
+font­family: "trebuchet ms", tahoma, verdana, sans­serif;
+font­size: 1.4em;
+}
+
+#bocadillo:before {
+content:"";
+position: absolute;
+width: 0;
+height: 0;
+border­top: 20px solid transparent;
+border­right: 30px solid #f80;
+border­bottom: 20px solid transparent;
+margin: 10px 0 0 ­32px;
+}
+
+#bocadilloarriba {
+padding: 10px;
+width: 220px;
+border­radius: 10px;
+background­color: #8f0;
+font­family: "trebuchet ms", tahoma, verdana, sans­serif;
+font­size: 1.4em;
+}

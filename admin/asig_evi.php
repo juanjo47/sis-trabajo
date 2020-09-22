@@ -70,9 +70,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <p>Inicio</p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview menu-close">
+                        <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link">
-                                
+
                                 <p>
                                     Gestion de Usuarios
                                     <i class="right fas fa-angle-left"></i>
@@ -81,28 +81,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="reg_est.php" class="nav-link">
-                                        
+
                                         <p>Registro Estudiantes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="reg_doc.php" class="nav-link">
-                                        
+
                                         <p>Registro Docentes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="reg_adm.php" class="nav-link">
-                                        
+                                    <a href="reg_adm.php" class="nav-link active">
+
                                         <p>Registro Administradores</p>
                                     </a>
                                 </li>
-                                
+
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview menu-open">
+                        <li class="nav-item has-treeview menu-close">
                             <a href="#" class="nav-link">
-                                
+
                                 <p>
                                     Gestion de Tribunal
                                     <i class="right fas fa-angle-left"></i>
@@ -110,29 +110,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        
-                                        <p>Asignacion de Tribunal</p>
+                                    <a href="asig_tut.php" class="nav-link">
+
+                                        <p>Asignacion de Tutor</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        
-                                        <p>Asignacion de Trabajo</p>
+                                    <a href="asig_rev.php" class="nav-link">
+
+                                        <p>Asignacion de Revisores</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
-                                        
+                                    <a href="asig_evi.php" class="nav-link">
+
                                         <p>Evidencia de asignaciones</p>
                                     </a>
                                 </li>
-                                
+
                             </ul>
                         </li>
                         <li class="nav-item has-treeview menu-close">
                             <a href="#" class="nav-link">
-                                
+
                                 <p>
                                     Seguimiento de TG
                                     <i class="right fas fa-angle-left"></i>
@@ -140,24 +140,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        
-                                        <p>Revision de documentos</p>
+                                    <a href="seg_trab.php" class="nav-link">
+
+                                        <p>Trabajos de Grado</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        
-                                        <p>fechas de entrega</p>
+                                    <a href="seg_evi.php" class="nav-link">
+
+                                        <p>Evidencia de TG</p>
                                     </a>
                                 </li>
-                                
+
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-close">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    Generacion de Reportes
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="rev_trab.php" class="nav-link">
+
+                                        <p>Revision de TG</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="rev_doc.php" class="nav-link">
+
+                                        <p>Documentos de Revision</p>
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
                     </ul>
                 </nav>
-                
-                
+
+
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
